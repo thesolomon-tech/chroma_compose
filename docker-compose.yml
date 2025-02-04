@@ -1,0 +1,14 @@
+services:
+  chroma:
+    image: chromadb/chroma
+    container_name: chroma
+    networks:
+      - AI-bridge
+      # deploy:
+      #   resources:
+      #     limits:
+      #       memory: "12G"
+networks:
+  AI-bridge:
+    external: true
+    name: AI-bridge
