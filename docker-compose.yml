@@ -4,10 +4,10 @@ services:
     container_name: chroma
     networks:
       - AI-bridge
-      # deploy:
-      #   resources:
-      #     limits:
-      #       memory: "12G"
+    # env_file:
+    # - .env
+    environment:
+      ANONYMIZED_TELEMETRY: "False"
 networks:
   AI-bridge:
     external: true
